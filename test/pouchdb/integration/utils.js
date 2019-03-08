@@ -128,7 +128,7 @@ testUtils.cleanup = function (dbs, done) {
   };
 
   dbs.forEach(function (db) {
-    new PouchDB(db).destroy(finished, finished);
+    new PouchDB(db, { adapter: 'memory' }).destroy(finished, finished);
   });
 };
 

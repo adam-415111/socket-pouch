@@ -2592,6 +2592,7 @@ AbstractPouchDB.prototype.destroy =
       /* istanbul ignore next */
       var trueName = usePrefix ?
         name.replace(new RegExp('^' + PouchDB.prefix), '') : name;
+        self.__opts.adapter = 'websql'
       return new PouchDB(trueName, self.__opts).destroy();
     });
     PouchPromise.all(deletedMap).then(destroyDb, callback);
@@ -2717,6 +2718,7 @@ function PouchDB(name, opts) {
   // In Node our test suite only tests this for PouchAlt unfortunately
   /* istanbul ignore if */
   if (!(this instanceof PouchDB)) {
+    opts.adapter= 'websql';
     return new PouchDB(name, opts);
   }
 
