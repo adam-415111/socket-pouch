@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "argsarray": "0.0.1",
+    "bluebird": "^2.9.24",
     "blob-util": "^2.0.2",
     "debug": "^4.1.1",
     "engine.io": "^3.3.2",
@@ -42,7 +43,6 @@
     "inherits": "^2.0.3",
     "lie": "^3.3.0",
     "pouchdb-core": "^7.0.0",
-    "pouchdb-adapter-node-websql": "^7.0.0",
     "pouchdb-binary-util": "^1.0.1",
     "pouchdb-promise": "^6.4.3"
   },

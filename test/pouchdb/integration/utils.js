@@ -128,7 +128,7 @@ testUtils.cleanup = function (dbs, done) {
   };
 
   dbs.forEach(function (db) {
-    new PouchDB(db, { adapter: 'websql' }).destroy(finished, finished);
+    new PouchDB(db, { adapter: 'memory' }).destroy(finished, finished);
   });
 };
 

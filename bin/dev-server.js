@@ -8,7 +8,7 @@ var CORS_PORT = 2020;
 var SOCKET_PORT = 8080;
 
 var cors_proxy = require('corsproxy');
-// var Promise = require('bluebird');
+var Promise = require('bluebird');
 var http_proxy = require('pouchdb-http-proxy');
 var http_server = require("http-server");
 var fs = require('fs');
